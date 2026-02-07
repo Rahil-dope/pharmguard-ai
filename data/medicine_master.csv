@@ -1,0 +1,5 @@
+id,name,brand,unit,stock,prescription_required,unit_strength
+med_aspirin_75,Aspirin (75 mg),Bayer,tablet,120,false,75mg
+med_azithro_250,Azithromycin 250mg,Generic,tablet,30,true,250mg
+med_losartan_50,Losartan 50mg,Generic,tablet,60,true,50mg
+med_metformin_500,Metformin 500mg,Generic,tablet,200,true,500mg

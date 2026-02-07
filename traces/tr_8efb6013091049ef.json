@@ -1,0 +1,27 @@
+{
+  "trace_id": "tr_8efb6013091049ef",
+  "user_id": "u_test",
+  "input_text": "I need 5 Aspirin 75mg tablets",
+  "nlu_slots": {
+    "medicine_candidate": {
+      "id": "med_aspirin_75",
+      "name": "Aspirin (75 mg)",
+      "brand": "Bayer",
+      "score": 77.14285714285715
+    },
+    "quantity": 5,
+    "dosage": "75mg",
+    "raw_slots": {
+      "raw_text": "I need 5 Aspirin 75mg tablets",
+      "quantity": 5,
+      "dosage": "75mg",
+      "medicine_phrase": "i need 5 aspirin 75mg tablets"
+    }
+  },
+  "safety_decision": "auto_approve",
+  "safety_message": "Approved: 5 x Aspirin (75 mg).",
+  "action_taken": "order_created:ord_d7e3bf5b00a0",
+  "order_id": "ord_d7e3bf5b00a0",
+  "llm_cot": "Input: I need 5 Aspirin 75mg tablets. NLU: {'raw_text': 'I need 5 Aspirin 75mg tablets', 'quantity': 5, 'dosage': '75mg', 'medicine_phrase': 'i need 5 aspirin 75mg tablets'}. Decision: auto_approve. Action: order_created:ord_d7e3bf5b00a0.",
+  "timestamp": "2026-02-07T13:54:57.495317"
+}

@@ -1,0 +1,52 @@
+{
+  "info": { "name": "PharmGuard AI", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    { "name": "Health", "request": { "method": "GET", "url": "{{base}}/health" } },
+    { "name": "List inventory", "request": { "method": "GET", "url": "{{base}}/api/inventory?page=1&page_size=20" } },
+    { "name": "Get medicine", "request": { "method": "GET", "url": "{{base}}/api/inventory/med_aspirin_75" } },
+    { "name": "User history", "request": { "method": "GET", "url": "{{base}}/api/users/u100/history" } },
+    { "name": "User alerts", "request": { "method": "GET", "url": "{{base}}/api/users/u100/alerts" } },
+    {
+      "name": "Converse (auto-approve)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"user_id\":\"u100\",\"text\":\"I need 10 Aspirin 75mg tablets\",\"context\":{}}" },
+        "url": "{{base}}/api/converse"
+      }
+    },
+    {
+      "name": "Converse (prescription required)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"user_id\":\"u100\",\"text\":\"I need Azithromycin 250mg\",\"context\":{}}" },
+        "url": "{{base}}/api/converse"
+      }
+    },
+    {
+      "name": "Create order",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"user_id\":\"u100\",\"medicine_id\":\"med_aspirin_75\",\"medicine_name\":\"Aspirin (75 mg)\",\"qty\":5,\"prescription_url\":null}" },
+        "url": "{{base}}/api/orders"
+      }
+    },
+    {
+      "name": "Webhook fulfillment",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"order_id\":\"ord_test123\"}" },
+        "url": "{{base}}/api/webhook/fulfillment"
+      }
+    },
+    { "name": "Get trace", "request": { "method": "GET", "url": "{{base}}/api/trace/tr_xxxxxxxxxxxxxxxx" } },
+    { "name": "Procurements", "request": { "method": "GET", "url": "{{base}}/api/procurements", "header": [{ "key": "X-Admin-Token", "value": "{{admin_token}}" }] } }
+  ],
+  "variable": [
+    { "key": "base", "value": "http://localhost:8000" },
+    { "key": "admin_token", "value": "demo-admin-token" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "trace_id": "tr_562993db44b54076",
+  "user_id": "u_trace",
+  "input_text": "2 Aspirin",
+  "nlu_slots": {
+    "medicine_candidate": {
+      "id": "med_aspirin_75",
+      "name": "Aspirin (75 mg)",
+      "brand": "Bayer",
+      "score": 75.0
+    },
+    "quantity": 2,
+    "dosage": null,
+    "raw_slots": {
+      "raw_text": "2 Aspirin",
+      "quantity": 2,
+      "dosage": null,
+      "medicine_phrase": "2 aspirin"
+    }
+  },
+  "safety_decision": "auto_approve",
+  "safety_message": "Approved: 2 x Aspirin (75 mg).",
+  "action_taken": "order_created:ord_58416a1c2766",
+  "order_id": "ord_58416a1c2766",
+  "llm_cot": "Input: 2 Aspirin. NLU: {'raw_text': '2 Aspirin', 'quantity': 2, 'dosage': None, 'medicine_phrase': '2 aspirin'}. Decision: auto_approve. Action: order_created:ord_58416a1c2766.",
+  "timestamp": "2026-02-07T13:55:34.602340"
+}

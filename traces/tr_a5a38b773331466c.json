@@ -1,0 +1,27 @@
+{
+  "trace_id": "tr_a5a38b773331466c",
+  "user_id": "u_test",
+  "input_text": "I need Azithromycin 250mg",
+  "nlu_slots": {
+    "medicine_candidate": {
+      "id": "med_azithro_250",
+      "name": "Azithromycin 250mg",
+      "brand": "Generic",
+      "score": 82.5
+    },
+    "quantity": 1,
+    "dosage": "250mg",
+    "raw_slots": {
+      "raw_text": "I need Azithromycin 250mg",
+      "quantity": 1,
+      "dosage": "250mg",
+      "medicine_phrase": "i need azithromycin 250mg"
+    }
+  },
+  "safety_decision": "require_prescription",
+  "safety_message": "Azithromycin 250mg requires a prescription. Please upload or provide prescription.",
+  "action_taken": "none",
+  "order_id": null,
+  "llm_cot": "Input: I need Azithromycin 250mg. NLU: {'raw_text': 'I need Azithromycin 250mg', 'quantity': 1, 'dosage': '250mg', 'medicine_phrase': 'i need azithromycin 250mg'}. Decision: require_prescription. Action: none.",
+  "timestamp": "2026-02-07T13:55:34.580125"
+}

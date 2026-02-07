@@ -1,0 +1,4 @@
+order_id,user_id,medicine_id,medicine_name,qty,date
+o1,u100,med_losartan_50,Losartan 50mg,30,2025-01-10
+o2,u100,med_metformin_500,Metformin 500mg,60,2025-03-10
+o3,u101,med_aspirin_75,Aspirin (75 mg),10,2024-12-15

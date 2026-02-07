@@ -1,0 +1,15 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.0.2, pluggy-1.6.0
+rootdir: D:\SEM 6\shitt\cursor\pharmguard-ai
+plugins: anyio-4.11.0, langsmith-0.6.4
+collected 1 item
+
+tests\test_persistence.py .                                              [100%]
+
+============================== warnings summary ===============================
+tests/test_persistence.py::test_stock_persistence
+  C:\Users\RAHIL\AppData\Local\Programs\Python\Python314\Lib\site-packages\sqlalchemy\sql\schema.py:3624: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    return util.wrap_callable(lambda ctx: fn(), fn)  # type: ignore
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 1 warning in 0.32s =========================

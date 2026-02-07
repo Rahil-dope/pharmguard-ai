@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATA_DIR=/data
+      - FULFILLMENT_WEBHOOK_URL=http://backend:8000/api/webhook/fulfillment
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OBS_API_KEY=${OBS_API_KEY:-}
+    volumes:
+      - ./data:/data
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - ADMIN_TOKEN=${ADMIN_TOKEN:-demo-admin-token}
+    depends_on:
+      - backend
